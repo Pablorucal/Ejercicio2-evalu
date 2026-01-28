@@ -1,0 +1,71 @@
+package ej2;
+
+/*Una empresa de logística dispone de cuatro tipos de contenedores para sus envíos:
+Palés: Capacidad para 500 unidades.
+Cajas Grandes: Capacidad para 100 unidades.
+Cajas Medianas: Capacidad para 25 unidades.
+Estuches: Capacidad para 1 unidad.
+Crea un programa en Java que, dada una cantidad total de artículos, calcule cuántos palés, cajas grandes, medianas y estuches se necesitan para optimizar el espacio.
+*/
+public class Almacen {
+	private int pales;
+	private int cajasG;
+	private int cajasM;
+	private int estuches;
+	
+	
+	
+	public int getPales() {
+		return pales;
+	}
+
+	public void setPales(int pales) {
+		this.pales = pales;
+	}
+
+	public int getCajasG() {
+		return cajasG;
+	}
+
+	public void setCajasG(int cajasG) {
+		this.cajasG = cajasG;
+	}
+
+	public int getCajasM() {
+		return cajasM;
+	}
+
+	public void setCajasM(int cajasM) {
+		this.cajasM = cajasM;
+	}
+
+	public int getEstuches() {
+		return estuches;
+	}
+
+	public void setEstuches(int estuches) {
+		this.estuches = estuches;
+	}
+
+	public Almacen() {
+		this.pales = 0;
+		this.cajasG = 0;
+		this.cajasM = 0;
+		this.estuches = 0;
+	}
+
+	public void almacenar(int articulos) {
+		if (articulos <= 0) {
+			System.out.println("No puede ser menor o igual a 0");
+		} else {
+			this.pales = articulos / 500;
+			articulos = articulos % 500;
+			this.cajasG = articulos / 100;
+			articulos = articulos % 100;
+			this.cajasM = articulos / 25;
+			articulos = articulos % 25;
+			this.estuches = articulos;
+		}
+	}
+
+}
