@@ -1,0 +1,15 @@
+package ej2;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Almacen a=new Almacen();
+		a.almacenar(4999);
+		System.out.println("Pales: "+a.getPales());
+		System.out.println("Cajas Grandes: "+a.getCajasG());
+		System.out.println("Cajas Medianas: "+a.getCajasM());
+		System.out.println("Estuches: "+a.getEstuches());
+		
+	}
+
+}
